@@ -1,35 +1,53 @@
 package uniandes.dpoo.taller4.interfaz;
 
+import java.awt.GridLayout;
+
 import javax.swing.*;
 import javax.swing.event.*;
 
 @SuppressWarnings("serial")
-public class PanelPropiedades extends JFrame implements ChangeListener{
+public class PanelPropiedades extends JPanel implements ChangeListener{
 	
 	private JRadioButton radio1,radio2,radio3;
 	private ButtonGroup bg;
-	private Dificultad dificultad;
-	private TamanioHorizontal tamanioHorizontal;
-	private TamanioVertical tamanioVertical;
+	private JComboBox listaTamanio;
+	private JLabel lblDificultad;
+	private JLabel lblTamanio;
 	
 	public PanelPropiedades()
 	{
-	setLayout(null);
-	bg = new ButtonGroup();
-	radio1 = new JRadioButton("Facil");
-	radio1.addChangeListener(this);
-	add(radio1);
-	bg.add(radio1);
+		setLayout(new GridLayout(1,8));
+		bg = new ButtonGroup();
+		
+		radio1 = new JRadioButton("Facil");
+		radio1.addChangeListener(this);
+		bg.add(radio1);
+		
+		radio2 = new JRadioButton("Medio");
+		radio2.addChangeListener(this);
+		bg.add(radio2);
+		
+		radio3 = new JRadioButton("Dificil");
+		radio3.addChangeListener(this);
+		bg.add(radio3);
+		
+		listaTamanio = new JComboBox();
+		listaTamanio.addItem("3x3");
+		listaTamanio.addItem("4x4");
+		listaTamanio.addItem("5x5");
+		
+		lblDificultad = new JLabel("Dificultad:");
+		lblTamanio = new JLabel("Tamaño:");
+		
+		add(new JLabel("	"));
+		add(lblTamanio);
+		add(listaTamanio);
+		add(lblDificultad);
+		add(radio1);
+		add(radio2);
+		add(radio3);
+		add(new JLabel("	"));
 	
-	radio2 = new JRadioButton("Medio");
-	radio2.addChangeListener(this);
-	add(radio2);
-	bg.add(radio2);
-	
-	radio3 = new JRadioButton("Dificil");
-	radio3.addChangeListener(this);
-	add(radio3);
-	bg.add(radio3);
 	}
 	
 	public void stateChanged(ChangeEvent e) {

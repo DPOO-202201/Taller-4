@@ -1,5 +1,7 @@
 package uniandes.dpoo.taller4.interfaz;
 
-public class PanelOpciones {
+import javax.swing.JPanel;
+
+public class PanelOpciones extends JPanel {
 
 }

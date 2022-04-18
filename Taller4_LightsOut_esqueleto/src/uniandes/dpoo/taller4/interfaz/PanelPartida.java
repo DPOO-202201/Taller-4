@@ -1,5 +1,7 @@
 package uniandes.dpoo.taller4.interfaz;
 
-public class PanelPartida {
+import javax.swing.JPanel;
+
+public class PanelPartida extends JPanel {
 
 }

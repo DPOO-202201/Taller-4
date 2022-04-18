@@ -18,6 +18,7 @@ public class InterfazJuego extends JFrame
 		setTitle("LightsOut");
 		setSize(580,700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         
         panelPropiedades = new PanelPropiedades();
         add(panelPropiedades,BorderLayout.NORTH);
@@ -26,7 +27,7 @@ public class InterfazJuego extends JFrame
         add(panelPartida,BorderLayout.CENTER);
         
         panelOpciones = new PanelOpciones();
-        add(panelOpciones,BorderLayout.CENTER);
+        add(panelOpciones,BorderLayout.EAST);
         
         infoPartida = new InfoPartida();
         add(panelPropiedades,BorderLayout.SOUTH);
