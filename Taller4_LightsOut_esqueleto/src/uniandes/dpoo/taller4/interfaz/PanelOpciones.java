@@ -1,12 +1,14 @@
 package uniandes.dpoo.taller4.interfaz;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class PanelOpciones extends JPanel {
+public class PanelOpciones extends JPanel implements ActionListener {
 	
 	private JButton btnNuevo;
 	private JButton btnReiniciar;
@@ -20,6 +22,10 @@ public class PanelOpciones extends JPanel {
 		btnReiniciar = new JButton("REINICIAR");
 		btnTop10 = new JButton("TOP-10");
 		btnCambiarJugador = new JButton("CAMBIAR JUGADOR");
+		
+		btnTop10.addActionListener(this);
+		
+		btnTop10.setActionCommand("TOP10");
 		
 		add(new JLabel("	"));
 		add(new JLabel("	"));
@@ -45,6 +51,13 @@ public class PanelOpciones extends JPanel {
 		add(new JLabel("	"));
 		add(new JLabel("	"));
 		
+	}
+	public void actionPerformed(ActionEvent e) {
+		String comando = e.getActionCommand();
+		
+		if(comando.equals("TOP10")) {
+			new VentanaTop10().setVisible(true);
+		}
 	}
 	
 }
