@@ -16,7 +16,8 @@ public class InterfazJuego extends JFrame
 	public InterfazJuego()
 	{
 		setTitle("LightsOut");
-		setSize(580,700);
+		setSize(900,680);
+		setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         
