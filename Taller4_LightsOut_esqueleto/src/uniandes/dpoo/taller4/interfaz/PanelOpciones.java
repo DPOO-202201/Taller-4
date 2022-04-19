@@ -1,5 +1,6 @@
 package uniandes.dpoo.taller4.interfaz;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -16,10 +17,23 @@ public class PanelOpciones extends JPanel {
 	public PanelOpciones() {
 		
 		setLayout(new GridLayout(23,1));
+		setBackground(Color.GRAY);
+		
 		btnNuevo = new JButton("NUEVO");
+		btnNuevo.setBackground(Color.DARK_GRAY);
+		btnNuevo.setForeground(Color.WHITE);
+		
 		btnReiniciar = new JButton("REINICIAR");
+		btnReiniciar.setBackground(Color.DARK_GRAY);
+		btnReiniciar.setForeground(Color.WHITE);
+		
 		btnTop10 = new JButton("TOP-10");
+		btnTop10.setBackground(Color.DARK_GRAY);
+		btnTop10.setForeground(Color.WHITE);
+		
 		btnCambiarJugador = new JButton("CAMBIAR JUGADOR");
+		btnCambiarJugador.setBackground(Color.DARK_GRAY);
+		btnCambiarJugador.setForeground(Color.WHITE);
 		
 		add(new JLabel("	"));
 		add(new JLabel("	"));

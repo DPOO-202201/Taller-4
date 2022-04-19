@@ -8,6 +8,7 @@ import javax.swing.*;
 public class VentanaTop10 extends JFrame{
 	private JPanel panelTop;
 	private JLabel columnaPosicion,columnaNonbre,columnaPuntaje;
+	private JLabel infoCuadricula;
 	
 	public VentanaTop10() {
 		setTitle("Top 10");
@@ -15,7 +16,7 @@ public class VentanaTop10 extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         
-        JPanel panelTop
+        JPanel panelTop;
         setLayout(new GridLayout(11,2));
         infoCuadricula = new JLabel();
 	}

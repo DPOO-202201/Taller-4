@@ -13,18 +13,34 @@ public class InfoPartida extends JPanel {
 	
 	public InfoPartida() {
 		
-		setLayout(new GridLayout(1,4));
+		setLayout(new GridLayout(1,7));
+		setBackground(Color.GRAY);
+		
 		lblJugadas = new JLabel ("Jugadas:");
+		lblJugadas.setForeground(Color.WHITE);
+		
 		txtfNumJugadas = new JTextField ("0");
+		txtfNumJugadas.setBackground(Color.DARK_GRAY);
+		txtfNumJugadas.setForeground(Color.WHITE);
 		txtfNumJugadas.setEditable(false);
+		
 		lblJugador = new JLabel ("Jugador:");
-		txtfNomJugador = new JTextField ("");
+		lblJugador.setForeground(Color.WHITE);
+		
+		txtfNomJugador = new JTextField ("Player");
+		txtfNomJugador.setBackground(Color.DARK_GRAY);
+		txtfNomJugador.setForeground(Color.WHITE);
 		txtfNomJugador.setEditable(false);
+		
 		setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		
+		add(new JLabel("	"));
 		add(lblJugadas);
 		add(txtfNumJugadas);
+		add(new JLabel("	"));
 		add(lblJugador);
 		add(txtfNomJugador);
+		add(new JLabel("	"));
 	}
 	
 	public void anctualizarNumJugadas(int numJugadas) {
