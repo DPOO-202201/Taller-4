@@ -30,7 +30,7 @@ public class InterfazJuego extends JFrame
         add(panelOpciones,BorderLayout.EAST);
         
         infoPartida = new InfoPartida();
-        add(panelPropiedades,BorderLayout.SOUTH);
+        add(infoPartida,BorderLayout.SOUTH);
 	}
 	
 	public static void main( String[] pArgs )
